@@ -3,7 +3,7 @@
   "version": "0.0.1",
   "private": true,
   "scripts": {
-    "dev": "TINA_PUBLIC_IS_LOCAL=true concurrently \"tinacms dev\" \"esbuild build-dev-watch\" \"nodemon dist/server.js\"",
+    "dev": "TINA_PUBLIC_IS_LOCAL=true concurrently \"tinacms dev\" \"yarn build-dev-watch\" \"nodemon dist/server.js\"",
     "dev:prod": "TINA_PUBLIC_IS_LOCAL=false concurrently \"tinacms dev\" \"yarn build-dev-watch\" \"nodemon dist/server.js\"",
     "build-dev-watch": "yarn esbuild server.ts --bundle --outfile=dist/server.js --platform=node --watch",
     "build": "tinacms build --partial-reindex && node build.mjs"
